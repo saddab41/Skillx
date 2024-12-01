@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feed Them</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            background: #800000; /* Changed background to maroon (#800000) */
+            color: white; /* Changed text color to white */
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        .logo img {
+            width: 150px; /* Adjust size as needed */
+            height: auto;
+            margin-bottom: 1rem;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        main {
+            padding: 2rem 0;
+        }
+
+        .about, .how-it-works, .contact, #contact-form {
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        /* How It Works Section */
+        .how-it-works .steps {
+            display: flex;
+            justify-content: space-between; /* Spread out the divs in the same line */
+            align-items: flex-start; /* Align the divs at the top */
+            flex-wrap: wrap; /* Allow wrapping for responsiveness */
+            gap: 2rem; /* Space between the steps */
+        }
+
+        /* Individual step styling */
+        .how-it-works .step {
+            flex: 1 1 30%; /* Each step now takes 30% of the width of the container */
+            padding: 1rem;
+            margin-bottom: 2rem; /* Space between rows */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #ffcccc; /* Soft pink background */
+            border-radius: 10px; /* Rounded corners */
+            text-align: center;
+        }
+
+        /* Delivery step should be centered below */
+        .how-it-works .step.delivery {
+            flex: 1 1 30%; /* Ensure Delivery also takes 30% */
+            margin-top: 2rem; /* Space from the divs above */
+            align-self: center; /* Center the delivery step */
+        }
+
+        /* Optional: For the text color inside the steps */
+        .how-it-works .step h3,
+        .how-it-works .step p {
+            color: #333; /* Darker text for contrast against the background */
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1.5rem;
+            background: #800000; /* Changed button background to maroon (#800000) */
+            color: white; /* Button text color to white */
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        footer {
+            background: #800000; /* Changed footer background to maroon (#800000) */
+            color: white; /* Footer text color to white */
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        form {
+            max-width: 500px;
+            margin: auto;
+            text-align: left;
+        }
+
+        form label {
+            display: block;
+            margin-top: 1rem;
+        }
+
+        form input, form textarea, form button {
+            width: 100%;
+            padding: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        form button {
+            background: #800000; /* Changed form button background to maroon (#800000) */
+            color: white; /* Button text color to white */
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Gallery Section */
+        .gallery {
+            margin-top: 2rem;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .gallery h2 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 1.5rem;
+            font-weight: bold;
+        }
+
+        .images {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Automatically adjust columns */
+            gap: 1.5rem;
+            justify-items: center; /* Center images within each grid item */
+            justify-content: center;
+            padding: 0 1rem;
+            max-width: 90%; /* Optional: Limits the width of the gallery container */
+        }
+
+        .image-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .image-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .image-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .image-item img:hover {
+            transform: scale(1.1); /* Zoom effect on image hover */
+        }
+
+        .response {
+            margin-top: 1rem;
+            font-size: 1rem;
+            color: #28a745;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src= "4.jpg" alt="Feed Them Logo">
+        </div>
+        <h1>Feed Them</h1>
+        <p>Nourishing Lives, One Meal at a Time</p>
+    </header>
+
+    <main>
+        <!-- About Section -->
+        <section class="about">
+            <h2>About Us</h2>
+            <p>We connect restaurants, local communities, and NGOs to ensure food reaches those in need. Join us in the fight against hunger, one meal at a time.</p>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="how-it-works">
+            <h2>How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <h3>1. Restaurants</h3>
+                    <p>List surplus food available for donation.</p>
+                </div>
+                <div class="step">
+                    <h3>2. Connect</h3>
+                    <p>NGOs and volunteers help in distributing the food.</p>
+                </div>
+                <div class="step delivery"> <!-- Delivery step -->
+                    <h3>3. Deliver</h3>
+                    <p>Food is delivered directly to those in need.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Picture Section -->
+        <section class="gallery">
+            <h2>Gallery</h2>
+            <div class="images">
+                <div class="image-item">
+                    <img src="1.webp" alt="Volunteers distributing food">
+                </div>
+                <div class="image-item">
+                    <img src="2.webp" alt="Food donations">
+                </div>
+                <div class="image-item">
+                    <img src="3.jpg" alt="Happy recipients">
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form -->
+        <section class="contact">
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+            <p id="responseMessage" class="response"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Feed Them | Together, We Can End Hunger</p>
+    </footer>
+</body>
+</html>
